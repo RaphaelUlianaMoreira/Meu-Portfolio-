@@ -28,13 +28,14 @@ body {
   width: 100%;
   top: 0px;
   left: 0px;
-  padding: 4rem 15%;
+  padding: 3rem 15%;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  align-items: center;
 }
 
 #menu-icon {
@@ -59,6 +60,11 @@ span {
   background: linear-gradient(270deg, #8bc6ec 10%, #9599e2 100%);
   background-clip: text;
   color: transparent;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
 }
 .navbar a {
   font-size: 1.8rem;
@@ -177,6 +183,7 @@ section {
 .btn-group {
   display: flex;
   gap: 1.5rem;
+  margin-left: 14%;
 }
 .btn {
   display: inline-block;
@@ -241,11 +248,9 @@ section {
     0 0 100px var(--main-color);
 }
 .about-text {
-  /* Contêiner do texto "Sobre" */
-  /* REMOVA height: 200px; (ou qualquer altura fixa) */
-  max-height: 100px; /* Altura inicial (ajuste conforme necessário) */
-  overflow: hidden; /* Oculta o texto que ultrapassa a altura */
-  transition: max-height 0.3s ease-in-out; /* Transição suave */
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .about-text.expanded {
@@ -466,6 +471,7 @@ section {
     display: none;
     flex-direction: column;
     align-items: center;
+    margin-left: auto;
   }
 
   .navbar.active {
@@ -498,6 +504,7 @@ section {
     width: auto;
     align-items: center;
     margin-right: 5%;
+    margin-left: auto;
   }
   .gradient-btn {
     display: inline-flex; /* Alinha os itens horizontalmente */
