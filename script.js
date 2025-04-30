@@ -7,6 +7,7 @@ const translations = {
     "nav-about": "About",
     "nav-services": "Services",
     "nav-contact": "Contact",
+    "nav-projects": "Projects",
     "contact-me": "Contact Me",
     "home-title": "Hi, It's <span>Raphael</span>",
     "home-subtitle": "I'm a <span>Web Developer</span>",
@@ -42,6 +43,11 @@ const translations = {
     subject: "Subject",
     message: "Your Message",
     "email-copied-text": "Email Copied!",
+    Projects: "Projects",
+    "Deforestation and Threatened Species in Brazil":
+      "Deforestation and Threatened Species in Brazil",
+    "project1-description": `Project created from a personal desire to combine two passions: graphic interface development and my hobby, biology.<br/><br/>This initiative presents two different chart models with real and updated data about:<br/><br/>Threatened species in Brazilian territory<br/><br/>Deforestation in Brazil`,
+    "review-project-btn": "Review Project",
   },
   pt: {
     "translate-button": "EN - US",
@@ -51,6 +57,7 @@ const translations = {
     "nav-about": "Sobre",
     "nav-services": "Serviços",
     "nav-contact": "Contato",
+    "nav-projects": "Projetos",
     "contact-me": "Contate-me",
     "home-title": "Olá, me chamo <span>Raphael</span>",
     "home-subtitle": "Sou um <span>Desenvolvedor Web</span>",
@@ -86,6 +93,11 @@ const translations = {
     subject: "Assunto",
     message: "Sua Mensagem",
     "email-copied-text": "Email Copiado!",
+    Projects: "Projetos",
+    "Deforestation and Threatened Species in Brazil":
+      "Desmatamento e Espécies Ameaçadas no Brasil",
+    "project1-description": `Projeto criado a partir de uma vontade pessoal de unir duas paixões: o desenvolvimento de interfaces gráficas e meu hobby, a biologia.<br/><br/>Esta iniciativa apresenta dois modelos de gráficos diferentes com dados reais e atualizados sobre:<br/><br/>Espécies ameaçadas no território brasileiro<br/><br/>Desmatamento no Brasil`,
+    "review-project-btn": "Ver Projeto",
   },
 };
 const flagImages = {
