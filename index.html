@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
+    <title>Raphael Moreira | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- Background Blobs -->
+    <div class="bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Header -->
     <header class="header">
       <div class="logo-container">
         <a href="#home" class="logo" data-translate-key="logo-text">
@@ -20,264 +25,291 @@
       <nav class="navbar">
         <a href="#home" data-translate-key="nav-home">Home</a>
         <a href="#about" data-translate-key="nav-about">About</a>
+        <a href="#skills" data-translate-key="nav-skills">Skills</a>
+        <a href="#experience" data-translate-key="nav-experience">Experience</a>
         <a href="#projects" data-translate-key="nav-projects">Projects</a>
         <a href="#services" data-translate-key="nav-services">Services</a>
+        <a href="#contact" data-translate-key="nav-contact">Contact</a>
       </nav>
       <div class="btn-group">
-        <div class="translate-btn-container"> <button id="translate-btn" class="gradient-btn" data-lang="pt">
-          <span class="flag-icon">
-            <img
-              src="brazil.svg"
-              alt="Bandeira do Brasil"
-              width="20"
-              height="14"
-              id="flag-image"
-            />
-          </span>
-          <span class="lang-text" data-translate-key="lang-code"></span>
-        </button></div>
+        <div class="translate-btn-container">
+          <button id="translate-btn" class="gradient-btn" data-lang="pt">
+            <span class="flag-icon">
+              <img src="brazil.svg" alt="Bandeira do Brasil" width="20" height="14" id="flag-image" />
+            </span>
+            <span class="lang-text" data-translate-key="lang-code"></span>
+          </button>
+        </div>
         <div class="contact-btn">
-          <a
-            href="mailto:raphael.moreira@soulasalle.com.br"
-            class="gradient-btn"
-            data-translate-key="contact-me"
-          >Contact Me</a>
+          <a href="mailto:raphael.moreira@soulasalle.com.br" class="gradient-btn" data-translate-key="contact-me">Contact Me</a>
         </div>
       </div>
-        <div class="menu-icon">
-          <i class="bx bx-menu" id="menu-icon"></i>
-        </div>
+      <div class="menu-icon">
+        <i class="bx bx-menu" id="menu-icon"></i>
       </div>
     </header>
+
+    <!-- Hero Section -->
     <section class="home" id="home">
-      <div class="home-content">
-        <h1 data-translate-key="home-title">Hi, It's <span>Raphael</span></h1>
-        <h3 data-translate-key="home-subtitle">
-          I'm a <span>Web Developer</span>
+      <div class="home-content reveal">
+        <h1 data-translate-key="home-title">Hi, I'm <span>Raphael</span></h1>
+        <h3 class="typing-wrapper">
+          <span data-translate-key="home-subtitle-prefix">I'm a </span><span id="typing-text" class="typing-text"></span><span class="typing-cursor">|</span>
         </h3>
         <p data-translate-key="home-description">
-          Specialized in crafting complete digital experiences, combining skills
-          in UI/UX design and interface prototyping to deliver intuitive and
-          functional solutions. My work ranges from user-centered planning and
-          design to the development of scalable web applications, focusing on
-          high performance and responsiveness. I strive to align creativity,
-          technology, and best development practices to efficiently meet project
-          needs.
+          Specialized in building scalable web products end-to-end — from Figma prototypes to production-ready applications. 4+ years of experience across global tech teams.
         </p>
         <div class="social-icons">
-          <div class="email-copy-container group relative inline-block">
+          <div class="email-copy-container">
             <a href="#" class="copy-email-btn">
-              <i class="bx bxl-gmail ..."></i>
+              <i class="bx bxl-gmail"></i>
             </a>
-            <span class="email-copied-tooltip tooltip">Email Copiado!</span>
+            <span class="email-copied-tooltip tooltip" data-translate-key="email-copied-text">Email Copied!</span>
           </div>
-          <a
-            href="https://github.com/RaphaelUlianaMoreira/Raphael/tree/master"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-4xl text-main-color transition-all duration-300 hover:text-text-color hover:bg-main-color border-2 border-main-color rounded-full p-3 m-[0.5rem] flex items-center justify-center hover:scale-125 hover:translate-y-[-5px] hover:shadow-[0_0_25px_var(--main-color)]"
-            ><i class="bx bxl-github"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/raphael-uliana-moreira/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-4xl text-main-color transition-all duration-300 hover:text-text-color hover:bg-main-color border-2 border-main-color rounded-full p-3 m-[0.5rem] flex items-center justify-center hover:scale-125 hover:translate-y-[-5px] hover:shadow-[0_0_25px_var(--main-color)]"
-          >
+          <a href="https://github.com/RaphaelUlianaMoreira" target="_blank" rel="noopener noreferrer">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/raphael-uliana-moreira/" target="_blank" rel="noopener noreferrer">
             <i class="bx bxl-linkedin-square"></i>
           </a>
-          <a
-            href="https://wa.me/5521993260811"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-4xl text-main-color transition-all duration-300 hover:text-text-color hover:bg-main-color border-2 border-main-color rounded-full p-3 m-[0.5rem] flex items-center justify-center hover:scale-125 hover:translate-y-[-5px] hover:shadow-[0_0_25px_var(--main-color)]"
-          >
+          <a href="https://wa.me/5521993260811" target="_blank" rel="noopener noreferrer">
             <i class="bx bxl-whatsapp"></i>
           </a>
         </div>
-
-        <!-- <div class="btn-group">
-                <a href="#" class="btn" data-translate-key="hire-btn">Hire</a>
-                <a href="#contact" class="btn" data-translate-key="contact-btn">Contact</a>
-            </div> -->
-      </div>
-      <div class="home-img">
-        <img src="foto.png" alt="" />
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="about-img">
-        <img src="foto.png" alt="" />
-      </div>
-      <div class="about-content">
-        <h2 data-translate-key="about-title">About <span>Me</span></h2>
-        <div id="about-text">
-          <p data-translate-key="about-description">
-            Software development professional with three years of experience at
-            a multinational company with diversified operations in the Oil & Gas
-            and Satellite/Internet sectors, where I worked on challenging
-            projects with a focus on UI/UX design. In the Satellite/Internet
-            sector, I participated in the development of innovative solutions
-            for tracking and monitoring Wi-Fi signals in buses and vans,
-            optimizing connectivity and user experience during transportation.
-            My responsibilities included web application development, creating
-            scalable and responsive interfaces, using technologies such as
-            GitLab for version control, TypeScript for static typing, React and
-            Next.js for the frontend, Node.js and Prisma for the backend, Figma
-            for interface design, TailwindCSS for styling, and Django for web
-            development. One of my main projects was the implementation and
-            updating of the company's Marketplace to a new design standard,
-            which involved refactoring existing components, optimizing the code
-            for better performance, and creating and editing plugins to add new
-            features and keep the website constantly evolving. I possess solid
-            skills in scalable web application development, REST APIs, Agile
-            (Scrum) methodologies, and UI/UX design. Furthermore, I have
-            experience using English daily while working with global teams,
-            which allowed me to collaborate effectively on international
-            projects.
-          </p>
+        <div class="hero-btns">
+          <a href="https://github.com/RaphaelUlianaMoreira" target="_blank" rel="noopener noreferrer" class="btn" data-translate-key="view-github-btn">View GitHub</a>
+          <a href="#contact" class="btn btn-outline" data-translate-key="contact-btn">Contact Me</a>
         </div>
-        <a
-          href="#"
-          class="btn"
-          id="read-more-btn"
-          data-translate-key="read-more-btn"
-          >Read More</a
-        >
+      </div>
+      <div class="home-img reveal">
+        <img src="foto.png" alt="Raphael Moreira" />
       </div>
     </section>
 
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-img reveal">
+        <img src="foto.png" alt="Raphael Moreira" />
+      </div>
+      <div class="about-content reveal">
+        <h2 data-translate-key="about-title">About <span>Me</span></h2>
+        <p data-translate-key="about-description">
+          Full Stack Developer with a strong background in product-focused environments. At Intelie by Viasat, I led the redesign and refactoring of a global Marketplace, collaborated with international teams daily, and shipped features used across Brazil. I'm now applying that same product mindset to startup environments, where speed, quality, and user experience matter most. Currently expanding into AI tooling and agent-based automation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+      <h2 class="heading reveal" data-translate-key="skills-title">Skills <span>&amp; Stack</span></h2>
+      <div class="skills-wrapper">
+        <div class="skills-category reveal">
+          <h3 data-translate-key="skills-frontend">Frontend</h3>
+          <div class="skills-grid">
+            <div class="skill-badge"><i class="bx bxl-react"></i><span>React</span></div>
+            <div class="skill-badge"><i class="bx bxl-typescript"></i><span>TypeScript</span></div>
+            <div class="skill-badge"><i class="bx bx-code-alt"></i><span>Next.js</span></div>
+            <div class="skill-badge"><i class="bx bxl-html5"></i><span>HTML5</span></div>
+            <div class="skill-badge"><i class="bx bxl-css3"></i><span>CSS3</span></div>
+            <div class="skill-badge"><i class="bx bx-palette"></i><span>TailwindCSS</span></div>
+          </div>
+        </div>
+        <div class="skills-category reveal">
+          <h3 data-translate-key="skills-backend">Backend</h3>
+          <div class="skills-grid">
+            <div class="skill-badge"><i class="bx bxl-nodejs"></i><span>Node.js</span></div>
+            <div class="skill-badge"><i class="bx bx-data"></i><span>Prisma</span></div>
+            <div class="skill-badge"><i class="bx bxl-php"></i><span>PHP</span></div>
+            <div class="skill-badge"><i class="bx bx-data"></i><span>SQL</span></div>
+          </div>
+        </div>
+        <div class="skills-category reveal">
+          <h3 data-translate-key="skills-tools">Tools</h3>
+          <div class="skills-grid">
+            <div class="skill-badge"><i class="bx bxl-figma"></i><span>Figma</span></div>
+            <div class="skill-badge"><i class="bx bxl-git"></i><span>Git</span></div>
+            <div class="skill-badge"><i class="bx bxl-github"></i><span>GitHub</span></div>
+            <div class="skill-badge"><i class="bx bxl-gitlab"></i><span>GitLab</span></div>
+            <div class="skill-badge"><i class="bx bx-infinite"></i><span>Scrum</span></div>
+            <div class="skill-badge"><i class="bx bxl-linux"></i><span>Linux</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Timeline Section -->
+    <section class="experience" id="experience">
+      <h2 class="heading reveal" data-translate-key="experience-title">Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-badge" data-translate-key="badge-current">Current</span>
+            <span class="timeline-date" data-translate-key="exp1-date">Sep/2024 – Present</span>
+            <h3 data-translate-key="exp1-title">Freelance Developer</h3>
+            <h4 data-translate-key="exp1-company">Autonomous</h4>
+            <p data-translate-key="exp1-description">Working on independent web development projects with focus on e-commerce and scalable web applications. Using TypeScript, React, Next.js, Node.js, Prisma, and TailwindCSS from requirements gathering to final delivery.</p>
+            <div class="timeline-tags">
+              <span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date" data-translate-key="exp2-date">Aug/2025 – Mar/2026</span>
+            <h3 data-translate-key="exp2-title">Software Developer</h3>
+            <h4 data-translate-key="exp2-company">T.O.Brasil</h4>
+            <p data-translate-key="exp2-description">Developed and maintained applications for the port operations sector, serving different ports across Brazil. Responsible for new applications and evolutive maintenance of existing systems, including business rule adjustments and performance improvements.</p>
+            <div class="timeline-tags">
+              <span>PHP</span><span>Java</span><span>React</span><span>SQL</span><span>Azure</span><span>GitLab</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date" data-translate-key="exp3-date">Aug/2021 – Aug/2024</span>
+            <h3 data-translate-key="exp3-title">Fullstack Software Developer</h3>
+            <h4 data-translate-key="exp3-company">Intelie by Viasat</h4>
+            <p data-translate-key="exp3-description">Led the redesign and refactoring of the company's global Marketplace. Worked on multidisciplinary projects in Oil &amp; Gas and Wi-Fi signal tracking for transportation. Collaborated with international teams daily in English throughout the full software development cycle.</p>
+            <div class="timeline-tags">
+              <span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>Prisma</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date" data-translate-key="edu-date">2019 – 2025</span>
+            <h3 data-translate-key="edu-title">Information Systems</h3>
+            <h4 data-translate-key="edu-institution">La Salle University</h4>
+            <p data-translate-key="edu-description">Bachelor's degree in Information Systems, concluded August/2025. Previously attended Computer Engineering at CEFET (2019).</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+      <h2 class="heading reveal" data-translate-key="projects-title">Projects</h2>
+      <div class="projects-grid">
+
+        <!-- Project Card: Perfume E-commerce -->
+        <div class="project-card glass-card reveal">
+          <div class="project-card-header">
+            <div class="project-icon"><i class="bx bx-shopping-bag"></i></div>
+            <div class="project-links">
+              <a href="https://e-comerce-trabalho-wheat.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="Live Demo">
+                <i class="bx bx-link-external"></i>
+              </a>
+              <a href="https://github.com/RaphaelUlianaMoreira/e-comerce-trabalho-" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub">
+                <i class="bx bxl-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3 data-translate-key="proj1-title">Perfume E-commerce</h3>
+          <p data-translate-key="proj1-description">Full e-commerce platform for a perfume brand — product catalog, cart, and checkout flow. Built with a focus on clean UI and smooth user experience.</p>
+          <div class="project-tags">
+            <span>React</span><span>Next.js</span><span>TypeScript</span><span>TailwindCSS</span>
+          </div>
+        </div>
+
+        <!-- GitHub CTA -->
+        <div class="project-card project-github-card glass-card reveal">
+          <i class="bx bxl-github project-github-big-icon"></i>
+          <h3 data-translate-key="projects-subtitle">See more on GitHub</h3>
+          <p data-translate-key="projects-description">I build e-commerce platforms, data visualization tools, and web applications. Check out my repositories and contributions.</p>
+          <a href="https://github.com/RaphaelUlianaMoreira" target="_blank" rel="noopener noreferrer" class="btn" data-translate-key="github-btn">
+            <i class="bx bxl-github"></i> View on GitHub
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services Section -->
     <section class="services" id="services">
-      <h2 class="heading" data-translate-key="services-title">Services</h2>
+      <h2 class="heading reveal" data-translate-key="services-title">Services</h2>
       <div class="services-container">
-        <div class="service-box">
+        <div class="service-box glass-card reveal">
           <div class="service-info">
             <i class="bx bxl-figma"></i>
-            <h4 data-translate-key="ui-ux-design">UI / Ux <br />Design</h4>
+            <h4 data-translate-key="ui-ux-design">UI / UX <br />Design</h4>
             <p data-translate-key="ui-ux-description">
-              I transform ideas into complete digital experiences, creating
-              interfaces that combine functionality and aesthetics. My work
-              involves designing and testing components focused on user
-              experience, ensuring responsive, intuitive, and accessible design.
-              I have the skills to create everything from simple pages to more
-              complex structures, always prioritizing efficient navigation and
-              an attractive visual layout.
+              I transform ideas into complete digital experiences, creating interfaces that combine functionality and aesthetics. Focused on user experience, responsive, intuitive, and accessible design.
             </p>
           </div>
         </div>
-        <div class="service-box">
+        <div class="service-box glass-card reveal">
           <div class="service-info">
             <i class="bx bx-code"></i>
-            <h4 data-translate-key="frontend-development">
-              Frontend Development
-            </h4>
+            <h4 data-translate-key="frontend-development">Frontend Development</h4>
             <p data-translate-key="frontend-description">
-              Specialist in developing modern and scalable interfaces, I offer
-              solutions to enhance websites and systems by fixing bugs,
-              implementing new features, and optimizing performance. I create
-              custom components and complete applications, ensuring a balance
-              between clean design and high functionality, as well as seamless
-              integration with APIs.
+              Specialist in modern and scalable interfaces. I fix bugs, implement new features, and optimize performance. Custom components and complete applications with seamless API integration.
             </p>
           </div>
         </div>
-        <div class="service-box">
+        <div class="service-box glass-card reveal">
           <div class="service-info">
             <i class="bx bx-code-curly"></i>
-            <h4 data-translate-key="backend-development">
-              Backend Development
-            </h4>
+            <h4 data-translate-key="backend-development">Backend Development</h4>
             <p data-translate-key="backend-description">
-              With experience in languages such as Java and C, I work on bug
-              fixing and integrating the backend with the frontend, ensuring
-              efficient communication between system components. I focus on
-              maintaining stable, optimized applications ready to handle the
-              demands of robust and dynamic projects.
+              With experience in Node.js, PHP, and SQL, I work on bug fixing and integrating the backend with the frontend, ensuring efficient communication and stable, optimized applications.
             </p>
           </div>
         </div>
       </div>
     </section>
-    <section class="projects" id="projects">
-      <h2 class="heading" data-translate-key="Projects">Projects</h2>
-    
-      <div class="projects-box">
-        <div class="projects-card">
-          <img src="project1.png" alt="" />
-          <h3 data-translate-key="Deforestation and Threatened Species in the Amazon">Deforestation and Threatened Species in Brazil</h3>
-          <p data-translate-key="project1-description">
-            Project created from a personal desire to combine two passions: graphic interface development and my hobby, biology.
-            <br/>
-            This initiative presents two different chart models with real and updated data about:
-            <br>
-            Threatened species in Brazilian territory
-            <br>
-            Deforestation in Brazil
-          </p>
-          <a href="https://projetos-tifolio.vercel.app" target="_blank" rel="noopener noreferrer" class="btn" data-translate-key="review-project-btn">Review Project</a>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2 class="heading reveal" data-translate-key="contact-heading">Contact <span>Me</span></h2>
+      <form action="#" class="contact-form glass-card reveal">
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" placeholder="Full Name" data-translate-key="full-name" />
+            <input type="email" placeholder="Email" data-translate-key="email" />
+          </div>
+          <div class="input-box">
+            <input type="number" placeholder="Phone Number" data-translate-key="phone-number" />
+            <input type="text" placeholder="Subject" data-translate-key="subject" />
+          </div>
         </div>
-      </div>
+        <textarea id="message" placeholder="Your Message" cols="30" rows="10" data-translate-key="message"></textarea>
+        <input type="submit" class="btn" data-translate-key="send-message-btn" value="Send Message" />
+      </form>
     </section>
 
-    <!-- <section class="contact" id="contact">
-    <h2 class="heading" data-translate-key="contact-heading">Contact <span>Me</span></h2>
-    <form action="#">
-        <div class="input-group">
-            <div class="input-box">
-                <input type="text" id="full-name" placeholder="Full Name" data-translate-key="full-name">
-                <input type="email" id="email" placeholder="Email" data-translate-key="email">
-            </div>
-            <div class="input-box">
-                <input type="number" id="phone-number" placeholder="Phone Number" data-translate-key="phone-number">
-                <input type="text" id="subject" placeholder="Subject" data-translate-key="subject">
-            </div>
-        </div>
-        <textarea name="" id="message" placeholder="Your Message" cols="30" rows="10" data-translate-key="message"></textarea>
-        <input type="submit" class="btn" data-translate-key="send-message-btn">
-    </form>
-</section> -->
-
+    <!-- Footer -->
     <footer class="footer">
       <div class="social-icons">
-        <div class="email-copy-container group relative inline-block">
+        <div class="email-copy-container">
           <a href="#" class="copy-email-btn">
-            <i class="bx bxl-gmail ..."></i>
+            <i class="bx bxl-gmail"></i>
           </a>
-          <span class="email-copied-tooltip tooltip">Email Copiado!</span>
+          <span class="email-copied-tooltip tooltip" data-translate-key="email-copied-text">Email Copied!</span>
         </div>
-        <a
-          href="https://github.com/RaphaelUlianaMoreira/Raphael/tree/master"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-4xl text-main-color transition-all duration-300 hover:text-text-color hover:bg-main-color border-2 border-main-color rounded-full p-3 m-[0.5rem] flex items-center justify-center hover:scale-125 hover:translate-y-[-5px] hover:shadow-[0_0_25px_var(--main-color)]"
-          ><i class="bx bxl-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/raphael-uliana-moreira/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-4xl text-main-color transition-all duration-300 hover:text-text-color hover:bg-main-color border-2 border-main-color rounded-full p-3 m-[0.5rem] flex items-center justify-center hover:scale-125 hover:translate-y-[-5px] hover:shadow-[0_0_25px_var(--main-color)]"
-          ><i class="bx bxl-linkedin-square"></i
-        ></a>
-        <a
-          href="https://wa.me/5521993260811"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-4xl text-main-color transition-all duration-300 hover:text-text-color hover:bg-main-color border-2 border-main-color rounded-full p-3 m-[0.5rem] flex items-center justify-center hover:scale-125 hover:translate-y-[-5px] hover:shadow-[0_0_25px_var(--main-color)]"
-          ><i class="bx bxl-whatsapp"></i
-        ></a>
+        <a href="https://github.com/RaphaelUlianaMoreira" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/raphael-uliana-moreira/" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-linkedin-square"></i>
+        </a>
+        <a href="https://wa.me/5521993260811" target="_blank" rel="noopener noreferrer">
+          <i class="bx bxl-whatsapp"></i>
+        </a>
       </div>
-      <ul class="list flex justify-center space-x-4">
-        <li>
-          <a href="#" data-translate-key="footer-faq">FAQ</a>
-        </li>
-        <li>
-          <a href="#services" data-translate-key="footer-services">Services</a>
-        </li>
-        <li>
-          <a href="#about" data-translate-key="footer-about-me">About Me</a>
-        </li>
+      <ul class="list">
+        <li><a href="#" data-translate-key="footer-faq">FAQ</a></li>
+        <li><a href="#services" data-translate-key="footer-services">Services</a></li>
+        <li><a href="#about" data-translate-key="footer-about-me">About Me</a></li>
+        <li><a href="#contact" data-translate-key="footer-contact">Contact</a></li>
       </ul>
       <p class="copyright" data-translate-key="footer-copyright">
         © Raphael Moreira | All Rights Reserved
