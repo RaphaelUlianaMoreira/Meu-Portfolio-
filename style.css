@@ -800,11 +800,39 @@ section {
   letter-spacing: 0.5px;
 }
 
+.project-thumb-badge--ai {
+  border-color: rgba(167, 139, 250, 0.55);
+  color: #c4b5fd;
+}
+
 .project-body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding: 2.5rem 3rem 3rem;
+}
+
+/* Featured project spans the full row with a side-by-side layout */
+.project-card--featured {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 760px) {
+  .project-card--featured {
+    flex-direction: row;
+  }
+  .project-card--featured .project-thumb {
+    width: 58%;
+    aspect-ratio: auto;
+    align-self: stretch;
+    min-height: 320px;
+    border-bottom: none;
+    border-right: 1px solid var(--glass-border);
+  }
+  .project-card--featured .project-body {
+    width: 42%;
+    justify-content: center;
+  }
 }
 
 .project-card-header {
