@@ -751,10 +751,67 @@ section {
   box-shadow: 0 12px 40px rgba(95, 182, 233, 0.12);
 }
 
+/* Media variant: screenshot thumbnail on top */
+.project-card--media {
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+}
+
+.project-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--second-bg-color);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-card--media:hover .project-thumb img {
+  transform: scale(1.04);
+}
+
+.project-thumb-badge {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.1rem;
+  background: rgba(8, 8, 8, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(95, 182, 233, 0.4);
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--main-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2.5rem 3rem 3rem;
+}
+
 .project-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
 .project-icon i {
@@ -793,7 +850,8 @@ section {
   color: var(--text-color);
 }
 
-.project-card > p {
+.project-card > p,
+.project-body > p {
   font-size: 1.5rem;
   line-height: 1.7;
   color: rgba(245, 239, 231, 0.75);
@@ -952,7 +1010,7 @@ section {
 
 .input-box input::placeholder,
 .contact-form textarea::placeholder {
-  color: rgba(245, 239, 231, 0.35);
+  color: rgba(245, 239, 231, 0.5);
 }
 
 .input-box input:focus,
@@ -1036,7 +1094,7 @@ section {
 
 .footer .copyright {
   font-size: 1.4rem;
-  color: rgba(245, 239, 231, 0.4);
+  color: rgba(245, 239, 231, 0.62);
 }
 
 /* ===== SCROLLBAR ===== */
@@ -1046,6 +1104,51 @@ section {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-track { background: var(--bg-color); }
+
+/* ===== ACCESSIBILITY ===== */
+/* Visible keyboard focus for all interactive elements */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.gradient-btn:focus-visible,
+.social-icons a:focus-visible,
+.project-link-btn:focus-visible,
+.copy-email-btn:focus-visible,
+#menu-icon:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.input-box input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: 2px;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .blob,
+  .img-glow-ring,
+  .typing-cursor,
+  .status-dot {
+    animation: none !important;
+  }
+}
 
 /* ===== RESPONSIVE: TABLET (≤ 1100px) ===== */
 @media (max-width: 1100px) {

@@ -312,17 +312,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!menuIcon || !navbar) return;
 
-  menuIcon.addEventListener("click", () => {
-    menuIcon.classList.toggle("bx-x");
-    navbar.classList.toggle("active");
+  const toggleMenu = () => {
+    const isOpen = navbar.classList.toggle("active");
+    menuIcon.classList.toggle("bx-x", isOpen);
+    menuIcon.setAttribute("aria-expanded", String(isOpen));
+  };
+
+  const closeMenu = () => {
+    menuIcon.classList.remove("bx-x");
+    navbar.classList.remove("active");
+    menuIcon.setAttribute("aria-expanded", "false");
+  };
+
+  menuIcon.addEventListener("click", toggleMenu);
+
+  // Keyboard support (Enter / Space)
+  menuIcon.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggleMenu();
+    }
   });
 
   // Close on nav link click
   navbar.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menuIcon.classList.remove("bx-x");
-      navbar.classList.remove("active");
-    });
+    link.addEventListener("click", closeMenu);
   });
 });
 

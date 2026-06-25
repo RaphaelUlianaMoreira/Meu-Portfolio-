@@ -22,7 +22,7 @@
           Raphael's<span> Portfolio</span>
         </a>
       </div>
-      <nav class="navbar">
+      <nav class="navbar" id="primary-nav">
         <a href="#home" data-translate-key="nav-home">Home</a>
         <a href="#about" data-translate-key="nav-about">About</a>
         <a href="#skills" data-translate-key="nav-skills">Skills</a>
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="menu-icon">
-        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-menu" id="menu-icon" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav"></i>
       </div>
     </header>
 
@@ -69,18 +69,18 @@
         </div>
         <div class="social-icons">
           <div class="email-copy-container">
-            <a href="#" class="copy-email-btn">
+            <a href="#" class="copy-email-btn" aria-label="Copiar e-mail">
               <i class="bx bxl-gmail"></i>
             </a>
             <span class="email-copied-tooltip tooltip" data-translate-key="email-copied-text">Email Copied!</span>
           </div>
-          <a href="https://github.com/RaphaelUlianaMoreira" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/RaphaelUlianaMoreira" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i class="bx bxl-github"></i>
           </a>
-          <a href="https://www.linkedin.com/in/raphael-uliana-moreira/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/raphael-uliana-moreira/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <i class="bx bxl-linkedin-square"></i>
           </a>
-          <a href="https://wa.me/5521993260811" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/5521993260811" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
             <i class="bx bxl-whatsapp"></i>
           </a>
         </div>
@@ -224,36 +224,46 @@
       <div class="projects-grid">
 
         <!-- Project Card: Dunas Fragâncias -->
-        <div class="project-card glass-card reveal">
-          <div class="project-card-header">
-            <div class="project-icon"><i class="bx bx-store-alt"></i></div>
-            <div class="project-links">
-              <a href="https://www.dunasfragancias.com" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="Live Site">
-                <i class="bx bx-link-external"></i>
-              </a>
+        <div class="project-card project-card--media glass-card reveal">
+          <a href="https://www.dunasfragancias.com" target="_blank" rel="noopener noreferrer" class="project-thumb" aria-label="Abrir site Dunas Fragâncias em nova aba">
+            <img src="dunas.jpg" alt="Página inicial do site Dunas Fragâncias" loading="lazy" width="1000" height="625" />
+            <span class="project-thumb-badge"><i class="bx bx-link-external"></i> Live</span>
+          </a>
+          <div class="project-body">
+            <div class="project-card-header">
+              <h3 data-translate-key="proj1-title">Dunas Fragâncias</h3>
+              <div class="project-links">
+                <a href="https://www.dunasfragancias.com" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Abrir site Dunas Fragâncias">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
             </div>
-          </div>
-          <h3 data-translate-key="proj1-title">Dunas Fragâncias</h3>
-          <p data-translate-key="proj1-description">Online store for a niche perfume brand — full product catalog, cart, and checkout flow. Live site focused on conversion and a strong brand identity.</p>
-          <div class="project-tags">
-            <span>React</span><span>Next.js</span><span>TypeScript</span><span>TailwindCSS</span>
+            <p data-translate-key="proj1-description">Online store for a niche perfume brand — full product catalog, cart, and checkout flow. Live site focused on conversion and a strong brand identity.</p>
+            <div class="project-tags">
+              <span>React</span><span>Next.js</span><span>TypeScript</span><span>TailwindCSS</span>
+            </div>
           </div>
         </div>
 
         <!-- Project Card: L'essence d'Ysaula -->
-        <div class="project-card glass-card reveal">
-          <div class="project-card-header">
-            <div class="project-icon"><i class="bx bx-purchase-tag-alt"></i></div>
-            <div class="project-links">
-              <a href="https://lessencedysaula.com.br" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="Live Site">
-                <i class="bx bx-link-external"></i>
-              </a>
+        <div class="project-card project-card--media glass-card reveal">
+          <a href="https://lessencedysaula.com.br" target="_blank" rel="noopener noreferrer" class="project-thumb" aria-label="Abrir site L'essence d'Ysaula em nova aba">
+            <img src="lessence.jpg" alt="Página inicial do site L'essence d'Ysaula" loading="lazy" width="1000" height="625" />
+            <span class="project-thumb-badge"><i class="bx bx-link-external"></i> Live</span>
+          </a>
+          <div class="project-body">
+            <div class="project-card-header">
+              <h3 data-translate-key="proj2-title">L'essence d'Ysaula</h3>
+              <div class="project-links">
+                <a href="https://lessencedysaula.com.br" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Abrir site L'essence d'Ysaula">
+                  <i class="bx bx-link-external"></i>
+                </a>
+              </div>
             </div>
-          </div>
-          <h3 data-translate-key="proj2-title">L'essence d'Ysaula</h3>
-          <p data-translate-key="proj2-description">Niche perfumery e-commerce with a premium feel — product showcase, smooth navigation, and a refined, sophisticated design. Live and in production.</p>
-          <div class="project-tags">
-            <span>React</span><span>Next.js</span><span>TypeScript</span><span>TailwindCSS</span>
+            <p data-translate-key="proj2-description">Niche perfumery e-commerce with a premium feel — product showcase, smooth navigation, and a refined, sophisticated design. Live and in production.</p>
+            <div class="project-tags">
+              <span>React</span><span>Next.js</span><span>TypeScript</span><span>TailwindCSS</span>
+            </div>
           </div>
         </div>
 
@@ -327,18 +337,18 @@
     <footer class="footer">
       <div class="social-icons">
         <div class="email-copy-container">
-          <a href="#" class="copy-email-btn">
+          <a href="#" class="copy-email-btn" aria-label="Copiar e-mail">
             <i class="bx bxl-gmail"></i>
           </a>
           <span class="email-copied-tooltip tooltip" data-translate-key="email-copied-text">Email Copied!</span>
         </div>
-        <a href="https://github.com/RaphaelUlianaMoreira" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/RaphaelUlianaMoreira" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <i class="bx bxl-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/raphael-uliana-moreira/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/raphael-uliana-moreira/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <i class="bx bxl-linkedin-square"></i>
         </a>
-        <a href="https://wa.me/5521993260811" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/5521993260811" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
           <i class="bx bxl-whatsapp"></i>
         </a>
       </div>
