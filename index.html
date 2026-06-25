@@ -52,6 +52,10 @@
     <!-- Hero Section -->
     <section class="home" id="home">
       <div class="home-content reveal">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span data-translate-key="status-available">Available for new projects</span>
+        </div>
         <h1 data-translate-key="home-title">Hi, I'm <span>Raphael</span></h1>
         <h3 class="typing-wrapper">
           <span data-translate-key="home-subtitle-prefix">I'm a </span><span id="typing-text" class="typing-text"></span><span class="typing-cursor">|</span>
@@ -59,6 +63,10 @@
         <p data-translate-key="home-description">
           Specialized in building scalable web products end-to-end — from Figma prototypes to production-ready applications. 4+ years of experience across global tech teams.
         </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn" data-translate-key="view-work-btn">View My Work <i class="bx bx-down-arrow-alt"></i></a>
+          <a href="#contact" class="btn btn-outline" data-translate-key="contact-btn">Contact Me</a>
+        </div>
         <div class="social-icons">
           <div class="email-copy-container">
             <a href="#" class="copy-email-btn">
@@ -76,13 +84,28 @@
             <i class="bx bxl-whatsapp"></i>
           </a>
         </div>
-        <div class="hero-btns">
-          <a href="https://github.com/RaphaelUlianaMoreira" target="_blank" rel="noopener noreferrer" class="btn" data-translate-key="view-github-btn">View GitHub</a>
-          <a href="#contact" class="btn btn-outline" data-translate-key="contact-btn">Contact Me</a>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label" data-translate-key="stat-years">Years of Experience</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">10+</span>
+            <span class="stat-label" data-translate-key="stat-projects">Projects Delivered</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">3</span>
+            <span class="stat-label" data-translate-key="stat-teams">Global Teams</span>
+          </div>
         </div>
       </div>
       <div class="home-img reveal">
-        <img src="foto.png" alt="Raphael Moreira" />
+        <div class="img-frame">
+          <span class="img-glow-ring"></span>
+          <img src="foto.png" alt="Raphael Moreira" />
+        </div>
       </div>
     </section>
 
@@ -200,21 +223,35 @@
       <h2 class="heading reveal" data-translate-key="projects-title">Projects</h2>
       <div class="projects-grid">
 
-        <!-- Project Card: Perfume E-commerce -->
+        <!-- Project Card: Dunas Fragâncias -->
         <div class="project-card glass-card reveal">
           <div class="project-card-header">
-            <div class="project-icon"><i class="bx bx-shopping-bag"></i></div>
+            <div class="project-icon"><i class="bx bx-store-alt"></i></div>
             <div class="project-links">
-              <a href="https://e-comerce-trabalho-wheat.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="Live Demo">
+              <a href="https://www.dunasfragancias.com" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="Live Site">
                 <i class="bx bx-link-external"></i>
-              </a>
-              <a href="https://github.com/RaphaelUlianaMoreira/e-comerce-trabalho-" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub">
-                <i class="bx bxl-github"></i>
               </a>
             </div>
           </div>
-          <h3 data-translate-key="proj1-title">Perfume E-commerce</h3>
-          <p data-translate-key="proj1-description">Full e-commerce platform for a perfume brand — product catalog, cart, and checkout flow. Built with a focus on clean UI and smooth user experience.</p>
+          <h3 data-translate-key="proj1-title">Dunas Fragâncias</h3>
+          <p data-translate-key="proj1-description">Online store for a niche perfume brand — full product catalog, cart, and checkout flow. Live site focused on conversion and a strong brand identity.</p>
+          <div class="project-tags">
+            <span>React</span><span>Next.js</span><span>TypeScript</span><span>TailwindCSS</span>
+          </div>
+        </div>
+
+        <!-- Project Card: L'essence d'Ysaula -->
+        <div class="project-card glass-card reveal">
+          <div class="project-card-header">
+            <div class="project-icon"><i class="bx bx-purchase-tag-alt"></i></div>
+            <div class="project-links">
+              <a href="https://lessencedysaula.com.br" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="Live Site">
+                <i class="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+          <h3 data-translate-key="proj2-title">L'essence d'Ysaula</h3>
+          <p data-translate-key="proj2-description">Niche perfumery e-commerce with a premium feel — product showcase, smooth navigation, and a refined, sophisticated design. Live and in production.</p>
           <div class="project-tags">
             <span>React</span><span>Next.js</span><span>TypeScript</span><span>TailwindCSS</span>
           </div>
